@@ -1,13 +1,11 @@
 import 'module5assignment2.dart';
 void main(){
 
-  // Creating Manager object
-  Manager manager = Manager("Alice Johnson", 75000, "HR");
 
-  // Creating Developer object
-  Developer developer = Developer("Bob Smith", 85000, "Dart");
+  Manager manager = Manager("Awindrela Roy", 75000, "HR");
 
-  // Displaying their information
+  Developer developer = Developer("Taufiqur Rahman", 85000, "Dart");
+
   manager.displayInfo();
   developer.displayInfo();
 

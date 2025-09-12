@@ -1,7 +1,7 @@
 // Base class
 class Employee {
   String name;
-  double salary;
+  int salary;
 
   Employee(this.name, this.salary);
 }
@@ -10,13 +10,12 @@ class Employee {
 class Manager extends Employee {
   String department;
 
-  Manager(String name, double salary, this.department) : super(name, salary);
+  Manager(String name, int salary, this.department) : super(name, salary);
 
   void displayInfo() {
     print("Manager Name: $name");
-    print("Salary: \$${salary.toStringAsFixed(2)}");
+    print("Salary: ${salary}");
     print("Department: $department");
-    print("------------------------------------");
   }
 }
 
@@ -24,14 +23,13 @@ class Manager extends Employee {
 class Developer extends Employee {
   String programmingLanguage;
 
-  Developer(String name, double salary, this.programmingLanguage)
+  Developer(String name, int salary, this.programmingLanguage)
       : super(name, salary);
 
   void displayInfo() {
     print("Developer Name: $name");
-    print("Salary: \$${salary.toStringAsFixed(2)}");
+    print("Salary: ${salary}");
     print("Programming Language: $programmingLanguage");
-    print("------------------------------------");
   }
 }
 

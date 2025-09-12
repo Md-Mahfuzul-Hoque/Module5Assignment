@@ -2,12 +2,11 @@ class Book {
 
   String title;
   String author;
-  double price;
+  int price;
 
 
   Book(this.title, this.author, this.price);
 
-  // Method to calculate discounted price
   double discountedPrice(double discountPercent) {
 
     double discountAmount = (price * discountPercent) / 100;
@@ -15,13 +14,14 @@ class Book {
 
   }
 
-  // Method to display book details
-  void displayDetails(double discountPercent) {
 
+  displayDetails(double discountPercent) {
+
+    // double discountPercent = 10; //fix discount
     print("Title: $title");
     print("Author: $author");
-    print("Original Price: \$${price.toStringAsFixed(2)}");
-    print("Discounted Price (${discountPercent}% off): \$${discountedPrice(discountPercent).toStringAsFixed(2)}");
+    print("Original Price: ${price.toStringAsFixed(2)}");
+    print("Discounted Price (${discountPercent}% off): ${discountedPrice(discountPercent).toStringAsFixed(2)}");
 
   }
 
